@@ -1,0 +1,24 @@
+image: node:latest
+
+stages:
+  - preparation
+  - testing
+
+E2E testing:
+  stage: testing
+  script:
+    - apt-get update
+    - apt-get install -y zip wget ca-certificates
+    - apt-get install -y libnss3-dev libasound2 libxss1 libappindicator3-1 gconf-service
+    - apt-get install -y libgconf-2-4 libpango1.0-0 xdg-utils fonts-liberation libgbm1 libu2f-udev libvulkan1
+    - apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - dpkg -i google-chrome*.deb
+    - rm google-chrome*.deb
+    - npm i
+    - npm run test:headless
+  artifacts:
+    when: always
+    expire_in: 4 days
+    paths:
+      - results/

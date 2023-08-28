@@ -1,0 +1,4 @@
+.idea/
+.vs/
+results/*
+node_modules

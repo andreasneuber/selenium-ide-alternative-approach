@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Joe Doe",
+    "number": "4242424242424242",
+    "expiryDate": "10/27",
+    "cvv": 753,
+    "response": "Success.",
+    "reason": "Cool! You are using VISA."
+  },
+  {
+    "name": "Hans Hansen",
+    "number": "5555555555554444",
+    "expiryDate": "02/28",
+    "cvv": 159,
+    "response": "Success.",
+    "reason": "Cool! You are using MASTERCARD."
+  },
+  {
+    "name": "Eugene Tonya",
+    "number": "4000000000009995",
+    "expiryDate": "07/26",
+    "cvv": 741,
+    "response": "Declined.",
+    "reason": "My dear.. You have insufficient funds."
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "Joe Doe",
+  "number": "4242424242424242",
+  "expiryDate": "10/27",
+  "cvv": 753,
+  "response": "Success.",
+  "reason": "Cool! You are using VISA."
+}

@@ -1,0 +1,9 @@
+capabilities:
+  browserName: "chrome"
+  goog:chromeOptions:
+    args:
+      - headless
+      - nogpu
+      - no-sandbox
+      - disable-dev-shm-usage
+  output-directory: results

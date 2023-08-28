@@ -1,0 +1,16 @@
+{
+  "name": "selenium-ide-alternative-approach",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:visible": "selenium-side-runner --config-file \"config/.headed.yml\" --output-directory=results tests/Sample-Project.side",
+    "test:headless": "selenium-side-runner  --config-file \"config/.headless.yml\" --output-directory=results tests/Sample-Project.side"
+  },
+  "author": "Andreas Neuber",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^116.0.0",
+    "selenium-side-runner": "^4.0.0-alpha.57"
+  }
+}

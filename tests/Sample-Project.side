@@ -1,0 +1,1083 @@
+{
+  "id": "d5b7c95c-da6c-41aa-8ccd-d9b614de93fd",
+  "version": "2.0",
+  "name": "Sample-Project",
+  "url": "http://localhost:8000/index.php",
+  "tests": [{
+    "id": "59efcf3f-95e0-45d7-9969-3e8f3bb9bb4a",
+    "name": "Admin-Privileges:Can access Human Resources records",
+    "commands": [{
+      "id": "b8fa11a8-e62f-4337-bbcf-064c463563e8",
+      "comment": "Given I navigate to login page",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01f41f1f-7c32-42c3-bf07-631d70b9460e",
+      "comment": "",
+      "command": "open",
+      "target": "?action=form4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a382fe3b-2c23-40bf-b130-43c553c0ce90",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1184x1005",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9334933f-bb06-446e-9c79-dda9f408888e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Form 4 - Login Form",
+      "targets": [
+        ["linkText=Form 4 - Login Form", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Form 4 - Login Form')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.php?action=form4')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Form 4 - Login Form')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45a97231-bf99-46ae-8fec-7178135cb7ee",
+      "comment": "When I submit username \"admin\" and password \"pw1234\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0aede940-2540-4698-9074-c10d2dbde080",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "9ac76103-664b-4421-b3e0-c194c3854f08",
+      "comment": "",
+      "command": "type",
+      "target": "id=pw",
+      "targets": [
+        ["id=pw", "id"],
+        ["name=pw", "name"],
+        ["css=#pw", "css:finder"],
+        ["xpath=//input[@id='pw']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "pw1234"
+    }, {
+      "id": "ff93bdc2-d780-4911-874a-3416ef658315",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnLogin",
+      "targets": [
+        ["id=btnLogin", "id"],
+        ["name=Login", "name"],
+        ["css=#btnLogin", "css:finder"],
+        ["xpath=//input[@id='btnLogin']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ac802e9-fee3-4538-8602-aba129a93427",
+      "comment": "Then I will be logged into the Admin Dashboard",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f5275a7-9df4-432d-8d20-c4f20149bd66",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Admin Dashboard')]", "xpath:innerText"]
+      ],
+      "value": "Admin Dashboard"
+    }, {
+      "id": "168410d9-962c-4e55-bee8-c3950cfe7223",
+      "comment": "When Admin searches for employee \"Joe Doe\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a31f6de-dae4-478c-90f7-76b5dab6d3d1",
+      "comment": "",
+      "command": "click",
+      "target": "id=hr-resources-link",
+      "targets": [
+        ["id=hr-resources-link", "id"],
+        ["linkText=Human Resources", "linkText"],
+        ["css=#hr-resources-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Human Resources')]", "xpath:link"],
+        ["xpath=//a[@id='hr-resources-link']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, 'index.php?action=employee')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Human Resources')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eaf4c2d-d111-49d2-9532-b77f3ec6e3ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=employee-name",
+      "targets": [
+        ["id=employee-name", "id"],
+        ["name=employee-name", "name"],
+        ["css=#employee-name", "css:finder"],
+        ["xpath=//input[@id='employee-name']", "xpath:attributes"],
+        ["xpath=//form[@id='employeeform']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Joe Doe"
+    }, {
+      "id": "59050e98-9e61-4c3e-bfac-cfdc1e9b6568",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSearch",
+      "targets": [
+        ["id=btnSearch", "id"],
+        ["name=search", "name"],
+        ["css=#btnSearch", "css:finder"],
+        ["xpath=//input[@id='btnSearch']", "xpath:attributes"],
+        ["xpath=//form[@id='employeeform']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64b8db9a-c7f6-473f-9d23-ec0c5a666170",
+      "comment": "    Then information appears that employee \"Joe Doe\" belongs to department \"Marketing\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7d2418d-0639-4827-bce7-28b4ee3a88d2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.name",
+      "targets": [
+        ["css=.name", "css:finder"],
+        ["xpath=//table[@id='employee-details']/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Joe Doe')]", "xpath:innerText"]
+      ],
+      "value": "Joe Doe"
+    }, {
+      "id": "7ca6507a-c4da-4deb-90ce-0179f6bd357f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.department",
+      "targets": [
+        ["css=.department", "css:finder"],
+        ["xpath=//table[@id='employee-details']/tbody/tr[2]/td[3]", "xpath:idRelative"],
+        ["xpath=//td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'Marketing')]", "xpath:innerText"]
+      ],
+      "value": "Marketing"
+    }, {
+      "id": "4773c577-fd6d-4462-9634-0bb9a54163fa",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "57dc63e8-0f3d-4e26-ad0f-b10cb7379620",
+    "name": "Admin-Privileges:Can access Sales statistics",
+    "commands": [{
+      "id": "1d81c505-5521-4725-a172-9299c5312872",
+      "comment": "Given I navigate to login page",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f80abeec-1500-4747-8a5a-96496c11fddf",
+      "comment": "",
+      "command": "open",
+      "target": "?action=form4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c33aadcc-2537-4c02-be69-23f93fe4d85f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1184x1005",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c4eaf0c-e48b-4173-86f8-8fd956c702cf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Form 4 - Login Form",
+      "targets": [
+        ["linkText=Form 4 - Login Form", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Form 4 - Login Form')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.php?action=form4')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Form 4 - Login Form')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25cff58f-fc15-4b34-96d6-a4795916deae",
+      "comment": "When I submit username \"admin\" and password \"pw1234\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6455c366-ad2a-43fc-a6df-cb1d888aca32",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "c76ce0d3-c9aa-4bbe-9851-58855e7acc4b",
+      "comment": "",
+      "command": "type",
+      "target": "id=pw",
+      "targets": [
+        ["id=pw", "id"],
+        ["name=pw", "name"],
+        ["css=#pw", "css:finder"],
+        ["xpath=//input[@id='pw']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "pw1234"
+    }, {
+      "id": "e545352b-4feb-48c1-8d09-23e2b815784f",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnLogin",
+      "targets": [
+        ["id=btnLogin", "id"],
+        ["name=Login", "name"],
+        ["css=#btnLogin", "css:finder"],
+        ["xpath=//input[@id='btnLogin']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11bc91db-84d1-41cc-a1b2-f236c7c4a8dc",
+      "comment": "Then I will be logged into the Admin Dashboard",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5de0f1af-f995-40d8-98a1-58f5b89ddf9f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Admin Dashboard')]", "xpath:innerText"]
+      ],
+      "value": "Admin Dashboard"
+    }, {
+      "id": "01b41432-e03f-49e6-8515-96fdc43c15e3",
+      "comment": "When Admin looks up total sales amount for month \"June\" in year \"2022\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fddfe691-7092-41fb-a858-df8822689dec",
+      "comment": "",
+      "command": "click",
+      "target": "id=sales-statistics-link",
+      "targets": [
+        ["id=sales-statistics-link", "id"],
+        ["linkText=Sales Statistics", "linkText"],
+        ["css=#sales-statistics-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sales Statistics')]", "xpath:link"],
+        ["xpath=//a[@id='sales-statistics-link']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, 'index.php?action=sales')]", "xpath:href"],
+        ["xpath=//div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Sales Statistics')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4467cd9a-30fc-47b1-b58e-889ee889c925",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Sales - Statistics')]", "xpath:innerText"]
+      ],
+      "value": "Sales - Statistics"
+    }, {
+      "id": "7e1a23f3-713e-4930-9563-f78f395be466",
+      "comment": "Then the total \"June\" sales amount is \"32164\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a104ced0-8c0f-432c-ae0e-8d3b55462306",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(7) > .sales:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(7) > .sales:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='sales-details']/tbody/tr[7]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'32164')]", "xpath:innerText"]
+      ],
+      "value": "32164"
+    }, {
+      "id": "3fc4f67f-0cee-486f-855b-4cc4d57a3ffe",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c79aa852-69e3-4697-9f8b-e037bb02d355",
+    "name": "Convert-Cesius:To Fahrenheit",
+    "commands": [{
+      "id": "337e53b4-ecf4-43d3-8e2e-333f43e8ca8b",
+      "comment": "    Given I provide \"30\" degree Celsius",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d04f020a-b30e-47db-a976-0baf27f9c117",
+      "comment": "",
+      "command": "open",
+      "target": "?action=form6",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e152f3e6-c3f1-43a0-b3ff-963c54dc6129",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1184x1005",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f5611dd-3572-4eed-903f-261a6f81831c",
+      "comment": "",
+      "command": "type",
+      "target": "name=celsius",
+      "targets": [
+        ["name=celsius", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='celsius']", "xpath:attributes"],
+        ["xpath=//form[@id='convert-celsius']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "30"
+    }, {
+      "id": "e1e48286-7c3f-4dba-bb79-322ef2b7fee1",
+      "comment": "When I click the convert button     ",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a955ba53-c345-4371-9aa1-3937c6b85f53",
+      "comment": "",
+      "command": "click",
+      "target": "name=Convert",
+      "targets": [
+        ["id=convert-celsius", "id"],
+        ["css=#convert-celsius", "css:finder"],
+        ["xpath=//form[@id='convert-celsius']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e23054ef-51a7-4c44-85fb-5c57a335ee9e",
+      "comment": "Then I should see as result \"86\" Fahrenheit",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f431849-f772-45d5-aaa2-73806a377394",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=fahrenheit",
+      "targets": [
+        ["name=fahrenheit", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='fahrenheit']", "xpath:attributes"],
+        ["xpath=//form[@id='convert-celsius']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "86"
+    }, {
+      "id": "c7d86777-d9a1-4b24-9824-ab1e2519a099",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9ba033c9-3f4c-4ba3-bf49-be782e35f629",
+    "name": "Credit-Card:Different responses",
+    "commands": [{
+      "id": "89810075-50f8-4ec3-95d2-bcb65d638c0e",
+      "comment": "",
+      "command": "storeJson",
+      "target": "[   {     \"name\": \"Joe Doe\",     \"number\": \"4242424242424242\",     \"expiryDate\": \"10/27\",     \"cvv\": 753,     \"response\": \"Success.\",     \"reason\": \"Cool! You are using VISA.\"   },   {     \"name\": \"Hans Hansen\",     \"number\": \"5555555555554444\",     \"expiryDate\": \"02/28\",     \"cvv\": 159,     \"response\": \"Success.\",     \"reason\": \"Cool! You are using MASTERCARD.\"   },   {     \"name\": \"Eugene Tonya\",     \"number\": \"4000000000009995\",     \"expiryDate\": \"07/26\",     \"cvv\": 741,     \"response\": \"Declined.\",     \"reason\": \"My dear.. You have insufficient funds.\"   } ]",
+      "targets": [],
+      "value": "cardData"
+    }, {
+      "id": "6567e5e1-62e2-49ce-9e2f-ace23e3be912",
+      "comment": "",
+      "command": "forEach",
+      "target": "cardData",
+      "targets": [],
+      "value": "iterator"
+    }, {
+      "id": "afb07b64-e9c6-4984-aeec-57b648163232",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}.name",
+      "targets": [],
+      "value": "cc_name"
+    }, {
+      "id": "4c3802b2-266f-4c96-af54-5a376a31886e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}.number",
+      "targets": [],
+      "value": "cc_number"
+    }, {
+      "id": "79770793-11e2-4a67-b625-5f9dfa26a0e7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}.expiryDate",
+      "targets": [],
+      "value": "cc_expiry_date"
+    }, {
+      "id": "dd2a8e98-ea85-4e48-b2ea-8aee8e693f4c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}.cvv",
+      "targets": [],
+      "value": "cc_cvv"
+    }, {
+      "id": "59a3d263-0515-4045-b881-6cc5d6dfde69",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}.response",
+      "targets": [],
+      "value": "cc_response"
+    }, {
+      "id": "c1a8558f-4055-4ca0-971d-14e7c82e68e6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}.reason",
+      "targets": [],
+      "value": "cc_reason"
+    }, {
+      "id": "a399b32f-ab24-4567-ad4f-c076b8fef77f",
+      "comment": "Given User is on credit card entry page",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "130899bf-84a8-41b2-be13-05819f3c6c29",
+      "comment": "",
+      "command": "open",
+      "target": "?action=form3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3eeff97c-c85f-43c9-bc17-85a718509182",
+      "comment": "When User <name> enters card number <cc-number> together with expiry date <expiry-date> and cvv <cvv> ",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15a5a638-4a6e-414a-a928-691a95a74786",
+      "comment": "",
+      "command": "type",
+      "target": "id=cname",
+      "targets": [
+        ["id=cname", "id"],
+        ["name=cardname", "name"],
+        ["css=#cname", "css:finder"],
+        ["xpath=//input[@id='cname']", "xpath:attributes"],
+        ["xpath=//form[@id='ccentry']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${cc_name}"
+    }, {
+      "id": "51962fc9-cc60-4f83-95fd-253e99c2a96a",
+      "comment": "",
+      "command": "type",
+      "target": "id=ccnum",
+      "targets": [
+        ["id=ccnum", "id"],
+        ["name=cardnumber", "name"],
+        ["css=#ccnum", "css:finder"],
+        ["xpath=//input[@id='ccnum']", "xpath:attributes"],
+        ["xpath=//form[@id='ccentry']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${cc_number}"
+    }, {
+      "id": "39ba4bdf-c1ee-4e18-a9e4-df46df9b5880",
+      "comment": "",
+      "command": "type",
+      "target": "id=expdate",
+      "targets": [
+        ["id=expdate", "id"],
+        ["name=expdate", "name"],
+        ["css=#expdate", "css:finder"],
+        ["xpath=//input[@id='expdate']", "xpath:attributes"],
+        ["xpath=//form[@id='ccentry']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${cc_expiry_date}"
+    }, {
+      "id": "dcf6dc8d-cb16-4c82-8566-1305a530e819",
+      "comment": "",
+      "command": "type",
+      "target": "id=cvv",
+      "targets": [
+        ["id=cvv", "id"],
+        ["name=cvv", "name"],
+        ["css=#cvv", "css:finder"],
+        ["xpath=//input[@id='cvv']", "xpath:attributes"],
+        ["xpath=//form[@id='ccentry']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "${cc_cvv}"
+    }, {
+      "id": "aded6818-e5a9-46ca-8a09-08b22957e8fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnPaynow",
+      "targets": [
+        ["id=btnPaynow", "id"],
+        ["name=paynow", "name"],
+        ["css=#btnPaynow", "css:finder"],
+        ["xpath=//input[@id='btnPaynow']", "xpath:attributes"],
+        ["xpath=//form[@id='ccentry']/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8daca443-59d6-4bff-9ddd-bb696b796df4",
+      "comment": "Then the page will respond with <response> and provide as reason <reason>",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7771854-e95f-4809-8072-29310aef24c1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.response",
+      "targets": [
+        ["css=.more-info", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'The card number is invalid.')]", "xpath:innerText"]
+      ],
+      "value": "${cc_response}"
+    }, {
+      "id": "396a668c-97c2-41d6-a2a9-db57935c0bac",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.more-info",
+      "targets": [
+        ["css=.more-info", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'The card number is invalid.')]", "xpath:innerText"]
+      ],
+      "value": "${cc_reason}"
+    }, {
+      "id": "fb992e6a-84d5-42b9-ad21-09c76671466a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edfd9510-e507-416c-abd8-23814ee4e2b5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f5496234-0daa-4d8a-b8e6-e67b47609fa1",
+    "name": "Login: A",
+    "commands": [{
+      "id": "d4fb7d6f-4cf9-4132-bb34-3abf9ac1edd7",
+      "comment": "",
+      "command": "// Given I navigate to login page",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4aff18d4-64a7-4525-9c1f-3b2936335947",
+      "comment": "",
+      "command": "open",
+      "target": "?action=form4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "284badc5-81d7-4446-8125-4d683720d0ba",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1184x1005",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4735cd8-bfb6-46b6-a2b2-5cb298e9eb80",
+      "comment": "",
+      "command": "//And I enter following for login",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3255db7d-87c9-4c55-ac09-a4f4d1c79737",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "816de483-1dd7-448f-80c6-61edb781cc21",
+      "comment": "",
+      "command": "type",
+      "target": "id=pw",
+      "targets": [
+        ["id=pw", "id"],
+        ["name=pw", "name"],
+        ["css=#pw", "css:finder"],
+        ["xpath=//input[@id='pw']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "pw1234"
+    }, {
+      "id": "9c3ecd44-d0eb-4b9c-896a-707bbe17d00a",
+      "comment": "",
+      "command": "//When I click login button",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c269146-2395-48dc-80fd-1135aa1061af",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnLogin",
+      "targets": [
+        ["id=btnLogin", "id"],
+        ["name=Login", "name"],
+        ["css=#btnLogin", "css:finder"],
+        ["xpath=//input[@id='btnLogin']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "113b35ee-224e-4e20-aa73-6b9a2e424eb1",
+      "comment": "",
+      "command": "//Then I should be able to access the protected area",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cac228e3-8c4a-4bf8-bda1-b56277b90fe2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.response",
+      "targets": [
+        ["css=.response", "css:finder"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Login successful')]", "xpath:innerText"]
+      ],
+      "value": "Login successful"
+    }, {
+      "id": "66698a39-f294-4814-b599-e62d56348166",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Admin Dashboard')]", "xpath:innerText"]
+      ],
+      "value": "Admin Dashboard"
+    }, {
+      "id": "ada300a2-f157-460e-b304-92dbd46fe4a5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b56fca26-08d5-421e-a1d7-8e25ac9d4b1c",
+    "name": "Login: B",
+    "commands": [{
+      "id": "5a1d20bb-e6b2-4e79-9c3b-b2807f98bd61",
+      "comment": "",
+      "command": "// Given I navigate to login page",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fcd07dc6-ad61-4ff4-8abf-46c5c9ffff28",
+      "comment": "",
+      "command": "open",
+      "target": "?action=form4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24d7130f-643d-4c5e-bb9a-388c5c12dc9a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1184x1005",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34d16cb1-dac7-40bf-8cb7-dc1bbfc059e0",
+      "comment": "",
+      "command": "//And I enter following values to login",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfabd3e4-c415-48d7-865b-6a9e8ccb942d",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "86984130-6b69-4d2f-bf63-62001429a636",
+      "comment": "",
+      "command": "type",
+      "target": "id=pw",
+      "targets": [
+        ["id=pw", "id"],
+        ["name=pw", "name"],
+        ["css=#pw", "css:finder"],
+        ["xpath=//input[@id='pw']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "pw1234"
+    }, {
+      "id": "db09a13d-8af6-4c76-991d-30e86c8cb19a",
+      "comment": "",
+      "command": "//When I click login button",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d01ba4f-728b-426a-a4f7-e09c3254ec00",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnLogin",
+      "targets": [
+        ["id=btnLogin", "id"],
+        ["name=Login", "name"],
+        ["css=#btnLogin", "css:finder"],
+        ["xpath=//input[@id='btnLogin']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8d54f9a-7933-45b2-b37c-a3e415a5467b",
+      "comment": "",
+      "command": "//Then I should be able to access the protected area",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd092d52-396a-4400-b3f9-bd60aa241bc4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.response",
+      "targets": [
+        ["css=.response", "css:finder"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Login successful')]", "xpath:innerText"]
+      ],
+      "value": "Login successful"
+    }, {
+      "id": "dd11a30d-657e-439c-a4ae-db3817841b15",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Admin Dashboard')]", "xpath:innerText"]
+      ],
+      "value": "Admin Dashboard"
+    }, {
+      "id": "69f349f1-e173-4722-8acc-e9a1034495fe",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3bead7b8-ceda-4d8c-9e70-adc6485ba7e2",
+    "name": "Provide-Your-Details:",
+    "commands": [{
+      "id": "8ed2f33e-12a5-43fe-9ef5-d10f969c4ad5",
+      "comment": "Given I navigate to Information about yourself page",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "984d0be1-0125-4f5c-a4c7-ca6ac2a7d89e",
+      "comment": "",
+      "command": "open",
+      "target": "?action=form1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a920f7b-4f13-4a35-a3a3-1abe5a4a09cd",
+      "comment": "When I provide the following details",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b39cfe06-fa92-4cad-9783-fdf6b5918cbc",
+      "comment": "",
+      "command": "type",
+      "target": "id=fname",
+      "targets": [
+        ["id=fname", "id"],
+        ["name=fname", "name"],
+        ["css=#fname", "css:finder"],
+        ["xpath=//input[@id='fname']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Joe"
+    }, {
+      "id": "f2dda3c7-4d5d-4491-8bd4-94ef97d1fd04",
+      "comment": "",
+      "command": "type",
+      "target": "id=lname",
+      "targets": [
+        ["id=lname", "id"],
+        ["name=lname", "name"],
+        ["css=#lname", "css:finder"],
+        ["xpath=//input[@id='lname']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Doe"
+    }, {
+      "id": "14536e57-e8ec-4a98-926c-1ac6e5a2935b",
+      "comment": "",
+      "command": "type",
+      "target": "id=street",
+      "targets": [
+        ["id=street", "id"],
+        ["name=street", "name"],
+        ["css=#street", "css:finder"],
+        ["xpath=//input[@id='street']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "10 Example Street"
+    }, {
+      "id": "c7f19129-c66e-4f7c-989d-95ce070c6c74",
+      "comment": "",
+      "command": "type",
+      "target": "id=city",
+      "targets": [
+        ["id=city", "id"],
+        ["name=city", "name"],
+        ["css=#city", "css:finder"],
+        ["xpath=//input[@id='city']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "Sample Town"
+    }, {
+      "id": "bc39a310-e25a-471a-993d-da41ad630eab",
+      "comment": "",
+      "command": "type",
+      "target": "id=zip",
+      "targets": [
+        ["id=zip", "id"],
+        ["name=zip", "name"],
+        ["css=#zip", "css:finder"],
+        ["xpath=//input[@id='zip']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "99999"
+    }, {
+      "id": "32b47f63-7b25-4269-bb89-3f2fa9eed557",
+      "comment": "",
+      "command": "type",
+      "target": "id=state",
+      "targets": [
+        ["id=state", "id"],
+        ["name=state", "name"],
+        ["css=#state", "css:finder"],
+        ["xpath=//input[@id='state']", "xpath:attributes"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "Great State"
+    }, {
+      "id": "abdcf017-ca36-4b8c-875d-7c55cfaa6f2f",
+      "comment": "",
+      "command": "type",
+      "target": "id=country",
+      "targets": [
+        ["id=country", "id"],
+        ["name=country", "name"],
+        ["css=#country", "css:finder"],
+        ["xpath=//input[@id='country']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": "USA"
+    }, {
+      "id": "445503e2-818c-4f55-b590-97e04d96ed87",
+      "comment": "",
+      "command": "type",
+      "target": "id=mobile",
+      "targets": [
+        ["id=mobile", "id"],
+        ["name=mobile", "name"],
+        ["css=#mobile", "css:finder"],
+        ["xpath=//input[@id='mobile']", "xpath:attributes"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": "123-456-789"
+    }, {
+      "id": "95e60248-e0ab-4cd3-98af-263d0c656f46",
+      "comment": "",
+      "command": "type",
+      "target": "id=home",
+      "targets": [
+        ["id=home", "id"],
+        ["name=home", "name"],
+        ["css=#home", "css:finder"],
+        ["xpath=//input[@id='home']", "xpath:attributes"],
+        ["xpath=//input[9]", "xpath:position"]
+      ],
+      "value": "987-654-321"
+    }, {
+      "id": "ff7017bd-362a-4c5f-8c1c-4db3028a23d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input[10]", "xpath:position"]
+      ],
+      "value": "joe@example.com"
+    }, {
+      "id": "1974b408-7012-460e-9825-1cced3ca9351",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-info",
+      "targets": [
+        ["id=submit-info", "id"],
+        ["name=send", "name"],
+        ["css=#submit-info", "css:finder"],
+        ["xpath=//input[@id='submit-info']", "xpath:attributes"],
+        ["xpath=//input[11]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "557c7fac-ef19-4b05-989a-f3d4751611a8",
+      "comment": "Then I will see message \"Thank you!\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a20ea8f-946c-4d9e-b6e5-a6b0c32da75b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Thank you!')]", "xpath:innerText"]
+      ],
+      "value": "Thank you!"
+    }, {
+      "id": "246e3194-94ca-469d-92f1-d0c11458347d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0e1b8b20-c41a-4362-b5d6-26a77910d305",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["59efcf3f-95e0-45d7-9969-3e8f3bb9bb4a", "57dc63e8-0f3d-4e26-ad0f-b10cb7379620", "c79aa852-69e3-4697-9f8b-e037bb02d355", "9ba033c9-3f4c-4ba3-bf49-be782e35f629", "f5496234-0daa-4d8a-b8e6-e67b47609fa1", "b56fca26-08d5-421e-a1d7-8e25ac9d4b1c", "3bead7b8-ceda-4d8c-9e70-adc6485ba7e2"]
+  }],
+  "urls": ["http://localhost:8000/", "http://localhost:8000/index.php"],
+  "plugins": []
+}
