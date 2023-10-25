@@ -10,7 +10,7 @@
   "author": "Andreas Neuber",
   "license": "ISC",
   "dependencies": {
-    "chromedriver": "^116.0.0",
-    "selenium-side-runner": "^4.0.0-alpha.58"
+    "chromedriver": "^118.0.1",
+    "selenium-side-runner": "^4.0.0-alpha.59"
   }
 }
