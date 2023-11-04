@@ -24,5 +24,12 @@ Readme in that repo has further details how to set it up.
 - Though Selenium IDE is mainly a record-and-replay tool there is some learning curve, e.g. how to execute scripts or loops
 - Report is produced in JSON format, but we need to make it more human-readable
 
+## Run in Docker
+To build the Docker image execute: `docker build --no-cache -t selenium-ide-tests-docker .`
+
+To run the tests inside the container: `docker run --rm --net="host" -it selenium-ide-tests-docker npm run test:headless`
+
+`--net=host` is needed because the application under test is running on `http://localhost:8000`
+
 ## Links
 https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started
