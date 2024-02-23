@@ -9,7 +9,7 @@ The tests fit for https://github.com/andreasneuber/automatic-test-sample-site.
 Readme in that repo has further details how to set it up.
 
 ## Usage - Run tests in Browser
-- Install Chrome Browser extension
+- Install the Selenium IDE extension for Chrome Browser
 - Open the `Sample-Project.side` project in tests/ folder
 - Press the Execute button
 
